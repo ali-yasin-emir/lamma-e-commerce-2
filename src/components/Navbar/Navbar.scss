@@ -1,0 +1,84 @@
+.navbar {
+  padding: 0.6em;
+  background: linear-gradient(
+    -45deg,
+    rgb(103, 58, 183),
+    rgb(244, 143, 177),
+    rgb(123, 31, 162)
+  );
+
+  .wrapper {
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .item {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+    }
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .center {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      @keyframes background-pan {
+        from {
+          background-position: 0% center;
+        }
+
+        to {
+          background-position: -200% center;
+        }
+      }
+      animation: background-pan 3s linear infinite;
+      background: linear-gradient(
+        to right,
+        rgb(123, 31, 162),
+        rgb(103, 58, 183),
+        rgb(244, 143, 177),
+        rgb(123, 31, 162)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+      background-size: 200%;
+    }
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      .icons {
+        display: flex;
+        gap: 15px;
+        color: gray;
+        cursor: pointer;
+      }
+
+      .cartIcon {
+        position: relative;
+        span {
+          font-size: 12px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #2879fe;
+          color: white;
+          position: absolute;
+          right: -10px;
+          top: -10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
